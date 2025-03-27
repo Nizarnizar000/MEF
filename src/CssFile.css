@@ -1,0 +1,52 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+.NavBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%; 
+    background-color: #001845;
+   
+}
+
+.Icon {
+    height: 70%;
+    width: 160px;
+}
+
+.NavBarButtonsBox {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.NavBarButtons {
+    height: 40%;
+    margin: 10px;
+    
+}
+
+.ConcoursSelectDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Concours_div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.Select{
+    text-align: center;
+}
+.Concours{
+    height: 40px;
+}
