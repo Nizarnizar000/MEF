@@ -10,24 +10,47 @@ body, html {
 
 .NavBar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    height: 15%; 
+    padding: 0 2rem;
+    height: 10%;
     background-color: #001845;
-   
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.Icon {
-    height: 70%;
-    width: 160px;
-}
+
 
 .NavBarButtonsBox {
-    height: 100%;
     display: flex;
     align-items: center;
+    gap: 1rem;
 }
 
+.NavBarButtonsBox button,
+.NavBarButtonsBox form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.NavBarButtonsBox button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.NavBarButtonsBox button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
 .NavBarButtons {
     height: 40%;
     margin: 10px;
@@ -38,15 +61,263 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    background-color: #f4f6f8;
+    min-height: 90vh;
 }
 .Concours_div{
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
 }
-.Select{
+.ConcoursLink{
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
     text-align: center;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.Concours{
-    height: 40px;
+.ConcoursLink:hover{
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.Select{
+    width: 300px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.Select:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    outline: none;
+}
+
+.InscriptionPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+.InputsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    border: 1px black solid;
+    width: fit-content;
+    padding: 10px;
+}
+.textarea{
+    height: 150px;
+    width: 300px;   
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.FilesContainer{
+    display: flex;
+    gap: 150px;
+}
+.TelechargementContainer{
+    position: relative;
+}
+.Telechargement{
+    border: 1px black solid;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    padding: 0;
+}
+
+.inputFile{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 30px;
+    opacity: 0;
+}
+
+.VoirCandidatureDiv{
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ValidationParagraph{
+    margin: 0;
+}
+
+.chercherForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.Inputs{
+    width: 400px;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;  
+}
+.ChercherInput:focus{
+    border-color: #4f46e5; /* Indigo */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.LinkA{
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+}
+
+th {
+    background-color: #4CAF50; 
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+.tableCandidatDiv{
+    padding: 100px;
+}
+
+.CandidatureExistante{
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Auth_Page{
+    border: 1px black solid;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Auth_Div{
+    text-align: center;
+    border: 1px black solid;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    max-width: 400px;
+    padding: 2rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb; /* Tailwind's gray-200 */
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.Auth_Input{
+    text-align: center;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;    
+}
+.Auth_Input:focus{
+    border-color: #4f46e5; /* Indigo */
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+.Auth_button{
+    background-color: #007bff;
+    color: white;
+}
+.Auth_button:hover{
+    background-color: #0056b3;
+    border-color: #0056b3;
+    
+}
+
+.AdminTableButtons{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+.config_buttons{
+   padding-top: 50px;
+   display: flex;
+   gap: 5px;
+}
+.voir_candidature{
+    display: flex;
+    justify-content: center;
+}
+.AdminFormConcours{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding-top: 1em;
+}
+
+.DeleteTh{
+    width: 100px;
 }
