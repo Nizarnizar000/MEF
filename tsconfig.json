@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+
+    // 👇 These two let TS coexist with JS
+    "allowJs": true,
+    "checkJs": false,
+
+    // 👇 Optional, helps if using paths like "@/components/ui/button"
+    // "baseUrl": "src",
+    // "paths": {
+    //   "@/*": ["*"]
+    // }
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

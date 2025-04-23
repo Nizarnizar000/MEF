@@ -30,4 +30,13 @@ export default [
       ],
     },
   },
+  {
+    // Optional: Ignore TS rules in JS files if you're using @typescript-eslint
+    files: ['**/*.{js,jsx}'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-var-requires': 'off',
+    },
+  },
 ]
